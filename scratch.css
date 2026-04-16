@@ -1,0 +1,288 @@
+/* scratch.css — Caden Montierth Basketball Highlights Page */
+
+/* ===== RESET & BASE ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Oswald', 'Arial Narrow', Arial, sans-serif;
+  background-color: #FFAB76;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* ===== TYPOGRAPHY ===== */
+h1, h2, h3 {
+  font-family: 'Bebas Neue', 'Impact', 'Arial Black', sans-serif;
+  letter-spacing: 0.06em;
+  color: #f5a623;
+}
+
+h1 { font-size: 3.8rem; line-height: 1; }
+h2 { font-size: 2.4rem; }
+h3 { font-size: 1.6rem; }
+
+p {
+  font-family: 'Georgia', serif;
+  font-size: 1rem;
+  color: #ccc;
+  line-height: 1.8;
+}
+
+a {
+  color: #f5a623;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+a:hover { color: #ffd27a; }
+
+/* ===== LAYOUT DIVS ===== */
+
+/* Div 1: Full-width hero wrapper */
+#hero-wrapper {
+  background: linear-gradient(135deg, #0d0d0d 0%, #1a1a2e 50%, #0d0d0d 100%);
+  border-bottom: 4px solid #f5a623;
+  padding: 60px 20px 50px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#hero-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><circle cx="30" cy="30" r="1.5" fill="rgba(245,166,35,0.12)"/></svg>') repeat;
+  pointer-events: none;
+}
+
+#hero-wrapper .subtitle {
+  font-size: 1.1rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin-top: 0.5rem;
+  font-family: 'Oswald', Arial, sans-serif;
+}
+
+/* Div 2: Main content container */
+#main-content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Div 3: Video section wrapper */
+#video-section {
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+  padding: 40px 30px;
+  margin: 40px 0;
+}
+
+/* Div 4: Stats / about sidebar block */
+#about-block {
+  background: linear-gradient(180deg, #1a1a2e, #111);
+  border-left: 5px solid #f5a623;
+  padding: 2rem;
+  margin: 30px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+/* Div 5: Footer wrapper */
+#footer-wrapper {
+  background: #080808;
+  border-top: 3px solid #f5a623;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+/* ===== NAV ===== */
+#top-nav {
+  background: #080808;
+  border-bottom: 2px solid #222;
+  padding: 14px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#top-nav .nav-logo {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.5rem;
+  color: #f5a623;
+  letter-spacing: 0.08em;
+}
+
+#top-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 24px;
+}
+
+#top-nav ul li a {
+  color: #ccc;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+#top-nav ul li a:hover { color: #f5a623; }
+
+/* ===== SECTION DIVIDER ===== */
+.gold-divider {
+  width: 70px;
+  height: 4px;
+  background: #f5a623;
+  margin: 14px auto 24px;
+}
+
+.section-label {
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #f5a623;
+  font-family: 'Oswald', Arial, sans-serif;
+  margin-bottom: 4px;
+}
+
+/* ===== VIDEO EMBEDS ===== */
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-top: 24px;
+}
+
+.video-item h3 {
+  font-size: 1.1rem;
+  color: #f5a623;
+  margin-bottom: 10px;
+  font-family: 'Oswald', Arial, sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  background: #000;
+  border-radius: 4px;
+  border: 1px solid #2a2a2a;
+}
+.video-responsive iframe {
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  border: none;
+}
+
+/* ===== LISTS ===== */
+.outer-list {
+  padding-left: 1.4rem;
+  color: #ccc;
+  font-family: 'Georgia', serif;
+}
+.outer-list > li { margin-bottom: 0.8rem; }
+
+.inner-list {
+  list-style-type: disc;
+  padding-left: 1.4rem;
+  margin-top: 0.4rem;
+  color: #aaa;
+}
+.inner-list li { margin-bottom: 0.3rem; font-size: 0.92rem; }
+
+/* ===== TABLEAU ===== */
+#tableau-section {
+  margin: 40px 0;
+  padding: 36px 30px;
+  background: #111;
+  border: 1px solid #2a2a2a;
+  border-radius: 6px;
+}
+
+.tableau-wrapper {
+  overflow-x: auto;
+  margin-top: 20px;
+  text-align: center;
+}
+
+/* ===== STATS ROW ===== */
+.stats-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+.stat-box {
+  flex: 1;
+  min-width: 120px;
+  background: #1a1a1a;
+  border-top: 3px solid #f5a623;
+  padding: 1.2rem;
+  text-align: center;
+}
+.stat-box .num {
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 2.4rem;
+  color: #f5a623;
+  display: block;
+  line-height: 1;
+}
+.stat-box .lbl {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #888;
+  margin-top: 4px;
+  display: block;
+}
+
+/* ===== ANCHOR SECTION ===== */
+.anchor-section {
+  scroll-margin-top: 80px;
+}
+
+/* ===== IMAGE ===== */
+.court-img {
+  width: 100%;
+  max-height: 340px;
+  object-fit: cover;
+  border-radius: 4px;
+  border: 2px solid #2a2a2a;
+  display: block;
+  margin: 24px 0;
+}
+
+/* ===== GAME LINK BUTTON ===== */
+.game-btn {
+  display: inline-block;
+  background: #f5a623;
+  color: #0d0d0d;
+  font-family: 'Bebas Neue', Impact, sans-serif;
+  font-size: 1.2rem;
+  letter-spacing: 0.08em;
+  padding: 0.8rem 2.4rem;
+  border-radius: 3px;
+  margin-top: 16px;
+  transition: background 0.2s, transform 0.15s;
+}
+.game-btn:hover { background: #ffd27a; color: #0d0d0d; transform: translateY(-2px); }
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 640px) {
+  h1 { font-size: 2.6rem; }
+  #top-nav { flex-direction: column; gap: 10px; }
+  #top-nav ul { flex-wrap: wrap; justify-content: center; }
+  #video-section { padding: 24px 16px; }
+}
